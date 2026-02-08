@@ -1,43 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amina I R - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amina I R | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
 </head>
-<body style="background-image: url('img/left.png'), url('img/right.jpeg'); 
-             background-size: 50% 100%, 50% 100%; 
-             background-position: left, right; 
-             background-repeat: no-repeat, no-repeat; 
-             height: 100vh; margin: 0;">
- <div class="wrapper">
-  <header>
-    <h1>AMINA I R</h1>
-    <nav>
+
+<body>
+<div class="wrapper">
+
+  <!-- ================= HEADER ================= -->
+<header class="navbar">
+  <div class="nav-left">
+    <a href="#home" class="logo-link">
+      <img src="img/logo.png" alt="Amina I R Logo" class="logo-img">
+    </a>
+  </div>
+
+  <button class="menu-toggle" aria-label="Toggle menu">
+    ☰
+  </button>
+
+  <nav class="nav-center">
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experiences</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- ================= HERO ================= -->
+
+  <main id="home">
+  <section class="intro">
+    <p class="intro-line">Hello, my name is</p>
+
+    <h1 class="intro-name">Amina I R</h1>
+
+    <h2 class="intro-role">
+      Aspiring Software Engineer
+    </h2>
+
+    <p class="intro-desc">
+I build clean, data-driven, and web-based solutions, focusing on thoughtful design and practical problem-solving.    </p>
+
+    <a href="doc/Amina I R.pdf" class="btn" download>
+      Download Resume
+    </a>
+  </section>
+</main>
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" title="Go to top">
+<i class="fas fa-angle-double-up"></i>
+</button>
+
+  <!-- ================= ABOUT ================= -->
+<section id="about" class="about-section">
+  <div class="about-content">
+
+    <h2 class="section-title">About Me</h2>
+
+    <p class="about-highlight">
+      B.Tech Information Technology Graduate ·Aspiring Web Developer
+    </p>
+
+    <p>
+      I am a B.Tech Information Technology graduate from Government Engineering
+College, Barton Hill, with a strong foundation in web development and
+core software engineering concepts.
+    </p>
+
+    <p>
+      I am currently working in web development at
+      <strong>Arnathan Softech Pvt Ltd</strong>, contributing to the development of
+      responsive web applications and backend functionality using Django.
+    </p>
+
+
+    <p>
+      I enjoy creating clean, user-focused solutions and continuously improving
+      my skills by working on real-world projects.
+    </p>
+
+    <div class="about-meta">
+      <span>💼 Web Developer Intern (Ongoing)</span>
+      <span>⚙️ Django · Python · JavaScript</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==================== SKILLS ================== -->
+
+<section id="skills" class="skills-section">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills-grid">
+
+    <!-- CORE SKILLS -->
+    <div class="skill-card">
+      <h3><i class="fa-solid fa-code"></i> Core Technologies</h3>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><i class="fa-brands fa-python"></i> Python</li>
+        <li><i class="fa-solid fa-leaf"></i> Django</li>
+        <li><i class="fa-brands fa-js"></i> JavaScript</li>
+        <li><i class="fa-brands fa-html5"></i> HTML</li>
+        <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+        <li><i class="fa-solid fa-database"></i> SQL</li>
       </ul>
-    </nav>
-  </header>
+    </div>
 
-  <main>
-    <section class="intro">
-      <p>“Hi, I'm <strong>AMINA I R</strong>...</p>
-      <p>an aspiring software engineer<br>
-      passionate about tech, design, and data.”</p>
+    <!-- TOOLS -->
+    <div class="skill-card">
+      <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools & Platforms</h3>
+      <ul>
+        <li><i class="fa-brands fa-git-alt"></i> Git</li>
+        <li><i class="fa-brands fa-github"></i> GitHub</li>
+        <li><i class="fa-solid fa-code"></i> VS Code</li>
+        <li><i class="fa-brands fa-figma"></i> Figma</li>
+        <li><i class="fa-solid fa-palette"></i> Canva</li>
+      </ul>
+    </div>
 
-      <a href="doc/Amina I R.pdf" download class="btn">Download Resume</a>
-    </section>
-  </main>
+    <!-- DATA -->
+    <div class="skill-card">
+      <h3><i class="fa-solid fa-chart-line"></i> Data & Analysis</h3>
+      <ul>
+        <li><i class="fa-solid fa-project-diagram"></i> Gephi</li>
+        <li><i class="fa-solid fa-network-wired"></i> CONN</li>
+        <li><i class="fa-solid fa-brain"></i> SPM12</li>
+        <li><i class="fa-solid fa-file-excel"></i> Microsoft Excel</li>
+      </ul>
+    </div>
 
-  <footer>
-    <p>&copy; Amina I R</p>
-  </footer>
+  </div>
+</section>
+
+  <!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="experience-section">
+    <h2 class="section-title"> Experiences</h2>
+
+ <div class="experience-card active" data-skills="python,django,html,css,javascript,git,github">
+  
+  <div class="experience-header">
+    <img src="IMG/arnathan-logo.png" alt="Arnathan Softech Logo" class="company-logo">
+    <div class="experience-info">
+      <h3>Web Developer Intern</h3>
+      <span class="company">Arnathan Softech Pvt Ltd</span>
+      <span class="duration">Nov 2025 – Present</span>
+    </div>
+  </div>
+
+  <p>
+    Web Developer Intern at Arnathan Softech Pvt Ltd, working on Django-based
+    web applications with modern front-end technologies.
+  </p>
+
+  <ul class="experience-points">
+    <li>Developed backend features using Django</li>
+    <li>Built responsive UI with HTML, CSS, and JavaScript</li>
+    <li>Collaborated using Git and GitHub</li>
+  </ul>
+
+  <div class="tech-used">
+    <span>Python</span>
+    <span>Django</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+  </div>
+
+  <span class="status">🚧 Ongoing Internship</span>
 </div>
+
+
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="projects-section">
+  <h2 class="section-title">Projects</h2>
+
+  <!-- ================= PROFESSIONAL PROJECTS ================= -->
+  <h3 class="projects-subtitle">Professional Projects</h3>
+  <div class="projects-grid">
+
+    <article class="project-card featured">
+      <span class="project-label">Featured · Ongoing</span>
+      <h3>Auto Service Management System</h3>
+        <span class="project-date">Jan 2026 – Present</span>
+
+      <p>
+        Real-world web application developed during internship using Django.
+        Includes appointment booking, customer interaction
+        modules.
+      </p>
+
+      <div class="tech-chips">
+        <span>Django</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h3>Rekudumbasangam Website</h3>
+        <span class="project-date">Nov 2024 – Jan 2026</span>
+      <p>
+        Internship training project focused on building a responsive website
+        using HTML, CSS, and Django following industry practices.
+      </p>
+
+      <div class="tech-chips">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Django</span>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ================= ACADEMIC PROJECTS ================= -->
+  <h3 class="projects-subtitle">Academic Projects</h3>
+  <div class="projects-grid">
+
+    <article class="project-card">
+      <h3>Complex Network Analysis of Brain</h3>
+        <span class="project-date">July 2024 – April 2025</span>
+      <p>
+        Analyzed fMRI brain networks using CONN, SPM12, and Gephi to compare
+        healthy individuals and Temporal Lobe Epilepsy (TLE) patients.
+      </p>
+
+      <div class="tech-chips">
+        <span>CONN</span>
+        <span>SPM12</span>
+        <span>Gephi</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h3>Infectious Disease Network Analysis</h3>
+        <span class="project-date">March 2024</span>
+
+      <p>
+        Simulated disease spread using graph theory to identify super-spreader
+        nodes and network vulnerabilities.
+      </p>
+
+      <div class="tech-chips">
+        <span>Gephi</span>
+        <span>R-Studio</span>
+        <span>Graph Theory</span>
+      </div>
+    </article>
+
+    <article class="project-card compact">
+      <h3>Panchayat Survey Data Analytics</h3>
+        <span class="project-date">Jan 2024 – June 2024</span>
+      <p>
+        Analyzed Valavannur Panchayat survey data under the TPLC initiative and
+        created visual insights to support local governance.
+      </p>
+
+      <div class="tech-chips">
+        <span>Excel</span>
+        <span>Data Analysis</span>
+        <span>Visualization</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <h3>Electronics Shop Management System</h3>
+        <span class="project-date">Jan 2023 – June 2023</span>
+      <p>
+        Designed a SQL-based DBMS for managing inventory, billing, and customer
+        records in a retail environment.
+      </p>
+
+      <div class="tech-chips">
+        <span>SQL</span>
+        <span>DBMS</span>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ================= SELF LEARNING PROJECTS ================= -->
+  <h3 class="projects-subtitle">Self-Learning Projects</h3>
+  <div class="projects-grid">
+
+    <article class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>
+        Designed and developed a responsive personal portfolio using HTML and CSS.
+      </p>
+
+      <div class="tech-chips">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+      </div>
+
+      <a href="https://github.com/Amina-309/Portfolio" target="_blank" class="project-link">
+        View on GitHub →
+      </a>
+    </article>
+
+    <article class="project-card">
+      <h3>To-Do Application</h3>
+      <p>
+        JavaScript-based task manager with an interactive user interface.
+      </p>
+
+      <div class="tech-chips">
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>CSS</span>
+      </div>
+
+      <a href="https://github.com/Amina-309/To-Do" target="_blank" class="project-link">
+        View on GitHub →
+      </a>
+    </article>
+
+    <article class="project-card">
+      <h3>Day Planner Application</h3>
+      <p>
+        Simple web application to plan and organize daily tasks and schedules.
+      </p>
+
+      <div class="tech-chips">
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>CSS</span>
+      </div>
+
+      <a href="https://github.com/Amina-309/Day-planner" target="_blank" class="project-link">
+        View on GitHub →
+      </a>
+    </article>
+
+  </div>
+</section>
+
+  <!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="contact-card">
+    <h2>Contact Me</h2>
+
+    <div class="contact-item">
+      <!-- Email -->
+      <a href="mailto:amina.ib.rz01@gmail.com" class="icon-circle">
+        <i class="fas fa-envelope"></i>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/amina-i-r-a99817348/" target="_blank" class="icon-circle">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/Amina-309" target="_blank" class="icon-circle">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2026 Amina I R</p>
+  </footer>
+
+</div>
+<script>
+/* Hamburger Toggle */
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-center");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+/* Scroll Active Link */
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-center a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});
+
+/* Navbar Shrink */
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 80) {
+    navbar.classList.add("shrink");
+  } else {
+    navbar.classList.remove("shrink");
+  }
+});
+</script>
+
+<script>
+// Get the button
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+// Show button when user scrolls down 100px
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+};
+
+// Click event to scroll to top smoothly
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
+
+
 </body>
 </html>
