@@ -154,7 +154,7 @@ core software engineering concepts.
  <div class="experience-card active" data-skills="python,django,html,css,javascript,git,github">
   
   <div class="experience-header">
-    <img src="IMG/arnathan-logo.png" alt="Arnathan Softech Logo" class="company-logo">
+    <img src="img/arnathan-logo.png" alt="Arnathan Softech Logo" class="company-logo">
     <div class="experience-info">
       <h3>Web Developer Intern</h3>
       <span class="company">Arnathan Softech Pvt Ltd</span>
@@ -216,7 +216,7 @@ core software engineering concepts.
 
     <article class="project-card">
       <h3>Rekudumbasangam Website</h3>
-        <span class="project-date">Nov 2024 – Jan 2026</span>
+        <span class="project-date">Nov 2025 – Jan 2026</span>
       <p>
         Internship training project focused on building a responsive website
         using HTML, CSS, and Django following industry practices.
@@ -389,24 +389,52 @@ core software engineering concepts.
 
 </div>
 <script>
-/* Hamburger Toggle */
+/* =========================
+   NAVBAR + MENU
+========================= */
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav-center");
-
-toggle.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
-
-/* Scroll Active Link */
+const navbar = document.querySelector(".navbar");
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-center a");
 
+/* Hamburger toggle */
+toggle.addEventListener("click", (e) => {
+  e.stopPropagation(); // prevent auto-close
+  nav.classList.toggle("active");
+});
+
+/* Prevent closing when clicking inside menu */
+nav.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+/* Close menu when clicking anywhere else */
+document.addEventListener("click", () => {
+  nav.classList.remove("active");
+});
+
+/* Scroll events */
 window.addEventListener("scroll", () => {
+
+  /* Auto-close menu on scroll */
+  if (nav.classList.contains("active")) {
+    nav.classList.remove("active");
+  }
+
+  /* Navbar shrink */
+  if (window.scrollY > 80) {
+    navbar.classList.add("shrink");
+  } else {
+    navbar.classList.remove("shrink");
+  }
+
+  /* Active link highlight */
   let current = "";
 
   sections.forEach(section => {
     const sectionTop = section.offsetTop - 120;
-    if (scrollY >= sectionTop) {
+    if (window.scrollY >= sectionTop) {
       current = section.getAttribute("id");
     }
   });
@@ -419,36 +447,25 @@ window.addEventListener("scroll", () => {
   });
 });
 
-/* Navbar Shrink */
-const navbar = document.querySelector(".navbar");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 80) {
-    navbar.classList.add("shrink");
-  } else {
-    navbar.classList.remove("shrink");
-  }
-});
-</script>
-
-<script>
-// Get the button
+/* =========================
+   SCROLL TO TOP BUTTON
+========================= */
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-// Show button when user scrolls down 100px
-window.onscroll = function() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
     scrollTopBtn.style.display = "block";
   } else {
     scrollTopBtn.style.display = "none";
   }
-};
+});
 
-// Click event to scroll to top smoothly
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 </script>
+
 
 
 </body>

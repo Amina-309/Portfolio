@@ -8,11 +8,11 @@
 }
 
 :root {
-  --bg: #0f172a;        /* deep navy background */
-  --text: #f8fafc;      /* soft white text */
-  --muted: #94a3b8;     /* muted gray-blue */
-  --accent: #d4af37;    /* elegant gold (logo color) */
-  --light: #1e293b;     /* slightly lighter navy for sections/cards */
+  --bg: #0f172a;        
+  --text: #f8fafc;      
+  --muted: #94a3b8;     
+  --accent: #d4af37;    
+  --light: #1e293b;     
 }
 
 
@@ -40,14 +40,14 @@ body {
 
 main {
   flex: 1;
-  padding: 80px 20px;
   max-width: 1100px;
   margin: auto;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 120px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 20px 80px;
 }
+
 
 /* -----------------------
    HEADER & NAV
@@ -141,14 +141,22 @@ main {
 }
 
 /* ===== HAMBURGER ===== */
-.menu-toggle {
+.menu-toggle { 
   display: none;
-  font-size: 1.6rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--text);
+  background: transparent;
+  border: 2px solid var(--accent);
+  backdrop-filter: blur(6px);
+  color: var(--accent);
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
+
+.menu-toggle:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
 
 /* ===== SHRINK EFFECT ===== */
 .navbar.shrink {
@@ -156,9 +164,7 @@ main {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-.navbar.shrink .logo-svg {
-  width: 34px;
-}
+
 
 .navbar.shrink .brand {
   font-size: 1.2rem;
@@ -175,15 +181,21 @@ main {
     top: 70px;
     left: 0;
     width: 100%;
-    background: #fff;
+    background: var(--bg);
+    backdrop-filter: blur(10px);    
     display: none;
     flex-direction: column;
     padding: 20px 0;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);  
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   .nav-center.active {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .nav-center ul {
@@ -191,6 +203,10 @@ main {
     align-items: center;
     gap: 22px;
   }
+}
+
+section {
+  scroll-margin-top: 80px;
 }
 
 /* -----------------------
@@ -272,13 +288,6 @@ main {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
-/* Title */
-.section-title {
-  font-size: 1.8rem;
-  color: var(--text);
-  margin-bottom: 10px;
-}
-
 /* Subtitle */
 .about-highlight {
   font-size: 0.95rem;
@@ -329,7 +338,7 @@ main {
   padding: 60px 20px;
   text-align: center;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .skills-section::before {
@@ -595,9 +604,11 @@ main {
   border: 2px solid var(--accent);
   background: linear-gradient(
     135deg,
-    rgba(100, 255, 218, 0.1),
+    rgba(212, 175, 55, 0.15),
+    rgba(30, 41, 59, 1)
   );
 }
+
 
 .project-label {
   display: inline-block;
@@ -738,7 +749,7 @@ main {
 }
 
 .icon-circle:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   background-color: #f3d36a; /* brighter gold on hover */
   box-shadow: 0 10px 25px rgba(243,211,106,0.5);
 }
@@ -781,7 +792,7 @@ footer {
 ------------------------ */
 @media (max-width: 768px) {
   .about-section {
-    grid-template-columns: 1fr;
+    padding: 0 15px;
   }
 
   header h1 {
@@ -806,11 +817,29 @@ footer {
   font-size: 1.5rem;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  display: none; /* hidden by default */
+  display: none; 
   transition: background-color 0.3s, transform 0.3s;
 }
 
 #scrollTopBtn:hover {
   background-color: #f3d36a; /* lighter gold on hover */
   transform: translateY(-3px);
+}
+
+#scrollTopBtn:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  #scrollTopBtn {
+    bottom: 15px;
+    right: 12px;
+
+    width: 38px;
+    height: 38px;
+    padding: 0;
+
+    font-size: 1rem;
+  }
 }
