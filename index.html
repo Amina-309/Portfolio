@@ -31,7 +31,7 @@
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experiences</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -51,10 +51,11 @@
     </h2>
 
     <p class="intro-desc">
-A Software Developer focused on building practical, user-friendly web applications </p>
-    <a href="https://drive.google.com/file/d/1K3BvXMwnqDZOJvEmioZC0FUrJZYKp8nD/view?usp=sharing" class="btn" download>
-      Download Resume
-    </a>
+      A Software Developer focused on building practical, user-friendly web applications </p>
+      <a href="https://drive.google.com/uc?export=download&id=1K3BvXMwnqDZOJvEmioZC0FUrJZYKp8nD"
+        class="btn">
+        Download Resume
+      </a>
   </section>
 </main>
 
@@ -217,7 +218,7 @@ A Software Developer focused on building practical, user-friendly web applicatio
         <span>HTML</span>
         <span>CSS</span>
         <span>JavaScript</span>
-        <span>SQL</span>
+        <span>Git</span>
       </div>
     </article>
 
@@ -234,6 +235,8 @@ A Software Developer focused on building practical, user-friendly web applicatio
         <span>Django</span>
         <span>HTML</span>
         <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Git</span>
       </div>
     </article>
 
@@ -373,7 +376,9 @@ A Software Developer focused on building practical, user-friendly web applicatio
 <section id="contact">
   <div class="contact-card">
     <h2>Contact Me</h2>
-
+    <p class="contact-text">
+      I'm currently open to internship and entry-level opportunities.
+    </p><br>
     <div class="contact-item">
       <!-- Email -->
       <a href="mailto:amina.ib.rz01@gmail.com" class="icon-circle">
@@ -397,11 +402,20 @@ A Software Developer focused on building practical, user-friendly web applicatio
 
 
   <!-- ================= FOOTER ================= -->
-  <footer>
-    <p>© 2026 Amina I R</p>
-  </footer>
+<footer>
+  <p>
+    Copyright © <span id="year"></span> 
+    Amina I R · Built with HTML, CSS & JavaScript
+  </p>
+</footer>
 
 </div>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
 <script>
 /* =========================
    NAVBAR + MENU
